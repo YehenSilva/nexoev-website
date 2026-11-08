@@ -1,0 +1,6 @@
+.showcase{display:flex;justify-content:center;flex-wrap:wrap;gap:34px;padding:20px 0 30px}
+.showcase__item{margin:0;text-align:center}
+.showcase__item:nth-child(even){margin-top:44px}
+.showcase figcaption{margin-top:24px;color:var(--tx2);font-size:14px;font-weight:500}
+.showcase__cta{text-align:center;margin-top:30px}
+@media(max-width:900px){.showcase__item:nth-child(even){margin-top:0}}

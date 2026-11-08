@@ -1,0 +1,5 @@
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .section-heading,.about h2{margin-bottom:0}
+.about>div:first-child h2{margin-bottom:24px}
+.about__visual{background:#fff;border:1px solid var(--bd);border-radius:36px;padding:48px 24px;box-shadow:var(--shadow)}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}}

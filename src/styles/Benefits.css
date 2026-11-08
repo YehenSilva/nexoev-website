@@ -1,0 +1,6 @@
+.benefits__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature-card{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:34px 30px;transition:transform .25s,box-shadow .25s,border-color .25s,opacity .7s}
+.feature-card.is-visible:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--lime)}
+.feature-card__icon{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--hl);border:1px solid var(--lime);margin-bottom:22px}
+.feature-card p{margin-top:10px}
+@media(max-width:900px){.benefits__grid{grid-template-columns:1fr}}

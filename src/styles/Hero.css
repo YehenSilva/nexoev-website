@@ -1,0 +1,13 @@
+.hero{padding:64px 0 96px;overflow:hidden;background:linear-gradient(180deg,#fff,var(--hl) 140%)}
+.hero__grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero__label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;color:#4a7a1b;background:var(--hl);border:1px solid var(--bd);padding:7px 14px;border-radius:99px;margin-bottom:24px}
+.hero .lead{margin-top:24px}
+.hero__buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero__visual{position:relative;min-height:540px;display:grid;place-items:center}
+.hero__glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,243,107,.55),transparent 68%)}
+.hero__car{position:absolute;bottom:14px;left:-8%;width:116%}
+.hero__visual .phone{position:relative;z-index:2}
+.hero__chip{position:absolute;z-index:3;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow)}
+.hero__chip b{display:block;font-size:24px;line-height:1.1}.hero__chip span{font-size:12px;color:var(--tx2)}
+.hero__chip--a{left:2%;top:18%}.hero__chip--b{right:0;bottom:32%}
+@media(max-width:900px){.hero{padding-top:40px}.hero__grid{grid-template-columns:1fr}.hero__visual{min-height:500px}.hero__chip--a{left:0}}

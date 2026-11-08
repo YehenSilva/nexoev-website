@@ -1,0 +1,6 @@
+.cta{padding-top:40px}
+.cta__panel{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:end;padding:64px 56px 0;border-radius:44px;overflow:hidden;border:1px solid var(--bd);background:radial-gradient(ellipse at 85% 100%,rgba(184,243,107,.75),transparent 60%),linear-gradient(135deg,var(--hl),#fff)}
+.cta__text{padding-bottom:64px}
+.cta__text img{display:block;margin-bottom:22px}
+.cta__phone{display:grid;place-items:center;transform:translateY(40px)}
+@media(max-width:900px){.cta__panel{grid-template-columns:1fr;padding:44px 24px 0;border-radius:30px}.cta__text{padding-bottom:20px}}
