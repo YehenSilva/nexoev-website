@@ -75,9 +75,6 @@ export default function AboutPage({ onNavigate }) {
                 <p>
                   Our team brings together software engineers, UX designers, and EV enthusiasts dedicated to making range anxiety a thing of the past.
                 </p>
-                <span className="about-page__photo-hint">
-                  Tip: Drop your team image into <strong>public/team-photo.jpg</strong> to display your photo here.
-                </span>
               </div>
             )}
           </div>
