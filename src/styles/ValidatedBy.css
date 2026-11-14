@@ -1,0 +1,234 @@
+.validated-by {
+  padding: 38px 0 44px;
+  background: var(--bg2);
+  border-top: 1px solid var(--bd);
+  border-bottom: 1px solid var(--bd);
+  position: relative;
+  overflow: hidden;
+}
+
+.validated-by__card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.validated-by__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4px;
+}
+
+.validated-by__label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5d6778;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.validated-by__label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime2);
+  display: inline-block;
+}
+
+/* Smooth Infinite Marquee / Auto-Scroll Container */
+.validated-by__marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.validated-by__track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: max-content;
+  animation: smoothScrollLogos 30s linear infinite;
+}
+
+.validated-by__marquee-wrapper:hover .validated-by__track {
+  animation-play-state: paused;
+}
+
+@keyframes smoothScrollLogos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Logo Card */
+.validated-by__item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 18px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.validated-by__logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grayscale Default State */
+.validated-by__img {
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.validated-by__img--mono {
+  opacity: 0.7;
+  filter: grayscale(100%);
+}
+
+/* Vibrant Full-Color State (hidden by default) */
+.validated-by__img--color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(17, 17, 17, 0.06));
+}
+
+/* Hover State - Smooth Color Reveal & Lift */
+.validated-by__item:hover {
+  background: #ffffff;
+  transform: translateY(-4px);
+}
+
+.validated-by__item:hover .validated-by__img--mono {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.validated-by__item:hover .validated-by__img--color {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Brand-Specific Glow & Borders on Hover */
+.validated-by__item--iit:hover {
+  border-color: rgba(139, 21, 56, 0.25);
+  box-shadow: 0 12px 32px rgba(139, 21, 56, 0.14), 0 2px 6px rgba(139, 21, 56, 0.05);
+}
+
+.validated-by__item--westminster:hover {
+  border-color: rgba(0, 43, 73, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 43, 73, 0.14), 0 2px 6px rgba(0, 43, 73, 0.05);
+}
+
+.validated-by__item--atp:hover {
+  border-color: rgba(142, 216, 61, 0.55);
+  box-shadow: 0 12px 32px rgba(142, 216, 61, 0.28), 0 2px 6px rgba(142, 216, 61, 0.1);
+}
+
+/* Specific optical height per logo */
+.validated-by__item--iit .validated-by__img {
+  height: 48px;
+}
+
+.validated-by__item--westminster .validated-by__img {
+  height: 38px;
+}
+
+.validated-by__item--atp .validated-by__img {
+  height: 46px;
+}
+
+/* Embedded variant for About Page */
+.validated-by--embedded {
+  background: #ffffff;
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  padding: 32px 36px;
+  margin: 48px 0;
+  box-shadow: 0 4px 20px rgba(17, 17, 17, 0.03);
+  overflow: hidden;
+}
+
+.validated-by--embedded .validated-by__marquee-wrapper {
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+@media (max-width: 860px) {
+  .validated-by__track {
+    gap: 24px;
+    animation-duration: 22s;
+  }
+
+  .validated-by__item {
+    padding: 10px 20px;
+  }
+
+  .validated-by__item--iit .validated-by__img {
+    height: 42px;
+  }
+
+  .validated-by__item--westminster .validated-by__img {
+    height: 34px;
+  }
+
+  .validated-by__item--atp .validated-by__img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .validated-by {
+    padding: 28px 0 32px;
+  }
+
+  .validated-by__header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .validated-by--embedded {
+    padding: 24px 16px;
+    margin: 32px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .validated-by__track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .validated-by__marquee-wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}

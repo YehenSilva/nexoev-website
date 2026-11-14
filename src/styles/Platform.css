@@ -1,0 +1,432 @@
+.platform {
+  background: var(--bg2);
+  border-block: 1px solid var(--bd);
+  position: relative;
+  padding: 80px 0;
+}
+
+.platform__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hl);
+  border: 1px solid var(--lime);
+  color: #3b6616;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+/* Highlights Grid */
+.platform__pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.platform__pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  padding: 24px 20px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  box-shadow: 0 2px 10px rgba(17, 17, 17, 0.02);
+}
+
+.platform__pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--lime);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+}
+
+.platform__pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--hl);
+  border: 1px solid var(--lime);
+  display: grid;
+  place-items: center;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+/* Sleek, Non-Clipping Module Tabs */
+.platform__tabs-wrapper {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.platform__tabs-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 6px 12px 14px;
+  width: 100%;
+}
+
+.platform__tabs-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.platform__tabs {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 999px;
+  border: 1.5px solid var(--bd);
+  gap: 5px;
+  box-shadow: 0 4px 20px rgba(17, 17, 17, 0.05);
+  margin: 0 auto;
+  flex-shrink: 0;
+  width: max-content;
+}
+
+.platform__tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tx2);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.platform__tab-btn:hover {
+  color: var(--dark);
+  background: var(--bg2);
+}
+
+.platform__tab-btn.is-active {
+  background: var(--dark);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(17, 17, 17, 0.18);
+}
+
+.platform__tab-icon {
+  flex-shrink: 0;
+  color: var(--tx2);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.platform__tab-btn:hover .platform__tab-icon {
+  color: var(--dark);
+}
+
+.platform__tab-btn.is-active .platform__tab-icon {
+  color: var(--lime);
+  transform: scale(1.08);
+}
+
+/* Interactive Module Showcase Card */
+.platform__showcase-card {
+  background: #ffffff;
+  border: 1px solid var(--bd);
+  border-radius: 32px;
+  padding: 48px 44px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+  min-height: 480px;
+}
+
+.platform__showcase-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.platform__module-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.platform__module-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3b6616;
+  background: var(--hl);
+  border: 1px solid var(--lime);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.platform__sprint-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--tx2);
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.platform__showcase-text h3 {
+  font-size: clamp(24px, 3.2vw, 34px);
+  color: var(--tx);
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.platform__showcase-text .lead {
+  font-size: 16px;
+  color: var(--tx2);
+  line-height: 1.6;
+}
+
+.platform__capabilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.platform__capability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--tx);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.platform__capability-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--hl);
+  border: 1px solid var(--lime);
+  display: grid;
+  place-items: center;
+  color: #2b540f;
+  margin-top: 1px;
+}
+
+.platform__showcase-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Driver-Facing Benefit Cards & Grid */
+.platform__api-card {
+  background: #ffffff;
+  border: 1px solid var(--bd);
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(17, 17, 17, 0.03);
+}
+
+.platform__api-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.platform__api-header h3 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.platform__api-header p {
+  font-size: 14.5px;
+  color: var(--tx2);
+  line-height: 1.55;
+}
+
+.platform__scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.platform__scope-col {
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid var(--bd);
+  transition: transform 0.2s ease;
+}
+
+.platform__scope-col.in-scope {
+  background: var(--hl);
+  border-color: rgba(142, 216, 61, 0.4);
+}
+
+.platform__scope-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.platform__scope-badge.in-scope {
+  background: #ffffff;
+  color: #2e5910;
+  border: 1px solid var(--lime);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 960px) {
+  .platform {
+    padding: 60px 0;
+  }
+
+  .platform__pillars {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .platform__showcase-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 32px;
+    border-radius: 24px;
+  }
+
+  .platform__api-card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .platform__tabs-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .platform__tabs-wrapper::before,
+  .platform__tabs-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    bottom: 14px;
+    width: 28px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .platform__tabs-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg2), rgba(246, 247, 246, 0));
+  }
+
+  .platform__tabs-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg2), rgba(246, 247, 246, 0));
+  }
+
+  .platform__tabs-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-padding: 0 20px;
+  }
+
+  .platform__tabs {
+    margin: 0; /* Left align when scrolling on smaller screens so the first tab is never clipped */
+  }
+}
+
+@media (max-width: 640px) {
+  .platform {
+    padding: 48px 0;
+  }
+
+  .platform__tabs-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .platform__tabs-container {
+    padding: 2px 14px 12px;
+  }
+
+  .platform__tabs {
+    border-radius: 999px;
+    padding: 5px;
+    gap: 4px;
+  }
+
+  .platform__tab-btn {
+    padding: 8px 13px;
+    font-size: 12.5px;
+    gap: 6px;
+  }
+
+  .platform__pillars {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .platform__pillar-card {
+    padding: 16px 14px;
+    border-radius: 16px;
+  }
+
+  .platform__pillar-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .platform__pillar-card h4 {
+    font-size: 20px;
+  }
+
+  .platform__showcase-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+    gap: 24px;
+  }
+
+  .platform__capability-item {
+    font-size: 13.5px;
+  }
+
+  .platform__scope-grid {
+    grid-template-columns: 1fr;
+  }
+}
